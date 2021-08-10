@@ -4,11 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Exe</title>
+  <title>EXE</title>
 </head>
 <body>
   <div class="container">
-    <h1>hello world!</h1>
+    <header class="header">
+      <div class="wrap header__wrap">
+        <a href="" class="header__logo">
+          <picture>
+            <source srcset="img/logo.webp">
+            <img src="img/logo.png" alt="logo" class="header__img">
+          </picture>
+        </a>
+        <nav class="menu header__menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">features</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">portfolio</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">skills</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">blog</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">clients</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /.header -->
+
+    <section class="banner">
+      <div class="wrap banner__wrap">
+        <div class="banner__info">
+          <h1 class="banner__title">smart moves <i>of <b>successful</b> business</i></h1>
+          <p class="banner__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, qui.</p>
+          <a href="#" class="banner__btn">buy this now</a>
+          <a href="#" class="banner__btn banner__btn--outline">live preview</a>
+        </div>
+      </div>
+    </section>
+    <!-- /.banner -->
+
+    <section class="advantages">
+      <h2 class="advantages__title">advantages</h2>
+      <div class="wrap">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__img">
+              <svg class="advantages__icon">
+                <use xlink:href="img/sprite.svg#leaf">
+              </svg>
+            </div>
+            <h3 class="advantages__subtitle">clean design</h3>
+            <p class="advantages__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam.</p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__img">
+              <svg class="advantages__icon">
+                <use xlink:href="img/sprite.svg#badge">
+              </svg>
+            </div>
+            <h3 class="advantages__subtitle">branding</h3>
+            <p class="advantages__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam.</p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__img">
+              <svg class="advantages__icon">
+                <use xlink:href="img/sprite.svg#smartphone">
+              </svg>
+            </div>
+            <h3 class="advantages__subtitle">responsive</h3>
+            <p class="advantages__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam.</p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__img">
+              <svg class="advantages__icon">
+                <use xlink:href="img/sprite.svg#settings-work-tool">
+              </svg>
+            </div>
+            <h3 class="advantages__subtitle">development</h3>
+            <p class="advantages__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, quibusdam.</p>
+          </li>
+        </ul>  
+      </div>
+    </section>
+    <!-- /.advantages -->
+
   </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/all.min.js"></script>

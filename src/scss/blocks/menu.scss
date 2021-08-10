@@ -1,0 +1,39 @@
+.menu {
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 35px;
+        list-style: none;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 12px;
+        color: $text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .5s;
+
+        &::before {
+            content: '';
+            display: block;
+            margin-bottom: 5px;
+            width: 8px;
+            height: 2px;
+            background-color: $secondary;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        &:hover {
+            color: $secondary;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
-@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/normalize.css/normalize";
 
 @import "variables";
 @import "fonts";
 @import "mixins";
 @import "core";
+
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/banner";
+@import "blocks/advantages";

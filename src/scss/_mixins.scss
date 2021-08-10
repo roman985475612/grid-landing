@@ -44,3 +44,35 @@
   clip: rect(0,0,0,0);
   overflow: hidden;
 }
+
+@mixin btn($bgc: $secondary, $bdc: transparent) {
+    display: inline-block;
+    padding: 20px 35px;
+    border-radius: 5px;
+    border: 2px solid $bdc;
+    background-color: $bgc;
+    font-size: 14px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: none;
+    appearance: none;
+    text-decoration: none;
+    transition: all .5s;
+    @content;
+
+    &:hover,
+    &:active {
+        @if $bdc == transparent {
+            background-color: darken($bgc, 20%);
+            border-color: darken($bdc, 20%);    
+        } @else {
+            background-color: $white;
+            border-color: $primary;
+            color: $primary;     
+        }
+    }
+}

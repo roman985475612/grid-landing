@@ -1,0 +1,19 @@
+.header {
+    border-bottom: 4px solid $secondary;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+}
