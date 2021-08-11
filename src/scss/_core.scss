@@ -2,7 +2,11 @@
  * Основные стили
  **/
 
- html {
+:focus {
+	outline: 3px solid $secondary;
+}
+
+html {
 	font-size: 16px;
 }
 

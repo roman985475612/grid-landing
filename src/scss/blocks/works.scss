@@ -1,0 +1,214 @@
+.works {
+    background-color: $bg-dark;
+
+    &__title-hide {
+        @include visually-hidden();
+    }
+
+    &__list {
+        padding-top: 80px;
+        padding-bottom: 160px;
+        padding-left: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(60px, auto));
+        grid-auto-rows: minmax(270px, auto);
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, minmax(145px, auto));
+        }
+
+        @media (max-width: 480px) {
+            grid-template-columns: minmax(290px, auto);
+            padding-top: 40px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::before {
+            content: '';
+            background-color: rgba(17, 17, 17, .85);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        &:hover,
+        &--active {
+
+            &::before {
+                z-index: 1;
+                opacity: 1;    
+            }
+
+            .works__info {
+                border-color: $secondary;
+                z-index: 2;
+                opacity: 1;
+            }
+        }
+
+        &:first-child {
+
+            &::before {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                grid-column: 1 / -1;
+                max-width: 100%;
+            }
+        }
+
+        &--col-3 {
+            grid-column: span 3;
+
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+
+        &--col-4 {
+            grid-column: span 4;
+
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+
+        &--col-5 {
+            grid-column: span 5;
+
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+
+        &--col-6 {
+            grid-column: span 6;
+
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    &__title {
+        margin: 20px 0;
+        font-family: 'Raleway';
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $white;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            display: block;
+            margin-bottom: 25px;
+            background-color: $text-color;
+            width: 70px;
+            height: 2px;
+        }
+
+        @media (max-width: 980px) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: $text-color;
+    }
+
+    &__info {
+        position: relative;
+        box-sizing: border-box;
+        padding: 10px 25px 80px;
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity, border-color .5s;
+    }
+
+    &__name {
+        margin: 20px 0;
+        font-family: 'Raleway';
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $white;
+        text-transform: uppercase;
+
+        @media (max-width: 980px) {
+            font-size: 18px;
+        }
+    }
+
+    &__desc {
+        margin: 20px 0;
+        font-size: 12px;
+        color: $text-color;
+        line-height: 1.6;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 20px 0;
+            background-color: $secondary;
+            width: 70px;
+            height: 2px;
+        }
+    }
+
+    &__btns {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    &__btn {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0 2px;
+        padding: 0;
+        background-color: $primary;
+        border: none;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        appearance: none;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 15px;
+        height: 15px;
+        fill: $white;
+    }
+}

@@ -185,6 +185,7 @@ task('default',
         'clean', 
         parallel(
             'copy:html', 
+            'copy:js', 
             'scss', 
             'js', 
         ), 

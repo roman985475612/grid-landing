@@ -1,7 +1,9 @@
 // Colors
 $black     : #000;
-$text-color: #707070;
-// $c         : #363636;
-$white     : #fff;
+$bg-dark   : #202020;
 $primary   : #252525;
+$text-color: #707070;
+$text-color-light: lighten(#707070, 15%);
+$white     : #fff;
 $secondary : #e5493a;
+$success   : #8dc63f;

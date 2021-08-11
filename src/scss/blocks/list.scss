@@ -1,0 +1,25 @@
+.list {
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        margin: 15px 0;
+        padding-left: 55px;
+        position: relative;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $text-color-light;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            background-color: $secondary;
+            width: 8px;
+            height: 2px;
+        }
+    }
+}
