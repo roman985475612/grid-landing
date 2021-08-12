@@ -26,3 +26,7 @@ body {
 .wrap {
 	@include min-max(320px, 1200px, 15px);
 }
+
+.d-block {
+	display: block !important;
+}

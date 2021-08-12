@@ -1,0 +1,60 @@
+.skills {
+    background-color: $secondary;
+
+    &__wrap {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 115px;
+
+        @media (max-width: 980px) {
+            column-gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            row-gap: 30px;
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        flex-basis: 25%;
+    }
+
+    &__title {
+        margin: 20px 0;
+        font-family: 'Raleway';
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $white;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            display: block;
+            margin-bottom: 25px;
+            background-color: $white;
+            width: 70px;
+            height: 2px;
+        }
+    }
+
+    &__text {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $white;
+    }
+
+    &__btn {
+        @include btn($bgc: $primary);
+    }
+
+    &__progress {
+        flex-grow: 1;
+    }
+}
