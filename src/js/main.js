@@ -46,3 +46,26 @@ window.addEventListener('scroll', () => {
 })
 
 
+// Carousel
+
+$(function() {
+    $('.clients__carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: [],
+        items: 5,
+        responsive: {
+            0:{
+                items:1
+            },
+            768:{
+                items:3
+            },
+            1024:{
+                items:5
+            }
+        }
+    })
+})

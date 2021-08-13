@@ -7,6 +7,13 @@
         flex-wrap: wrap;
         column-gap: 35px;
         list-style: none;
+
+        &--sm-column {
+            @media (max-width: 480px) {
+                flex-direction: column;
+                row-gap: 15px;
+            }
+        }
     }
 
     &__link {
@@ -26,6 +33,13 @@
             background-color: $secondary;
             opacity: 0;
             transition: opacity .5s;
+        }
+
+        &--without-line {
+
+            &::before {
+                display: none;
+            }
         }
 
         &:hover {

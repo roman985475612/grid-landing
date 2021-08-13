@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>EXE</title>
 </head>
 <body>
   <div class="container">
-    <header class="header">
+    <header id="home" class="header">
       <div class="wrap header__wrap">
         <a href="" class="header__logo">
           <picture>
@@ -18,13 +20,13 @@
         </a>
         <nav class="menu header__menu">
           <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">home</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">features</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">portfolio</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">skills</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">blog</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">clients</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">contacts</a></li>
+            <li class="menu__item"><a href="#home" class="menu__link">home</a></li>
+            <li class="menu__item"><a href="#advantages" class="menu__link">advantages</a></li>
+            <li class="menu__item"><a href="#works" class="menu__link">works</a></li>
+            <li class="menu__item"><a href="#skills" class="menu__link">skills</a></li>
+            <li class="menu__item"><a href="#blog" class="menu__link">blog</a></li>
+            <li class="menu__item"><a href="#clients" class="menu__link">clients</a></li>
+            <li class="menu__item"><a href="#contacts" class="menu__link">contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -43,7 +45,7 @@
     </section>
     <!-- /.banner -->
 
-    <section class="advantages">
+    <section id="advantages" class="advantages">
       <h2 class="advantages__title">advantages</h2>
       <div class="wrap">
         <ul class="advantages__list">
@@ -88,7 +90,7 @@
     </section>
     <!-- /.advantages -->
 
-    <section class="works">
+    <section id="works" class="works">
       <div class="wrap">
         <h2 class="works__title-hide">our works</h2>
         <ul class="works__list">
@@ -209,7 +211,7 @@
     </section>
     <!-- /.responsive -->
 
-    <section class="skills">
+    <section id="skills" class="skills">
       <div class="wrap skills__wrap">
         <div class="skills__info">
           <h2 class="skills__title">our skills</h2>
@@ -256,7 +258,7 @@
     </section>
     <!-- /.skills -->
 
-    <section class="blog">
+    <section id="blog" class="blog">
       <div class="wrap blog__wrap">
         <h2 class="blog__title-hide">latest post</h2>
         <ul class="blog__list">
@@ -339,8 +341,99 @@
     </section>
     <!-- /.blog -->
 
+    <section id="clients" class="clients">
+      <div class="wrap clients__wrap">
+        <h2 class="clients__title">our happy clients</h2>
+        <p class="clients__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates nemo corporis, minus totam nesciunt illo hic harum consequuntur quos dolore libero tenetur nulla, debitis laborum?</p>
+        <ul class="clients__carousel carousel owl-carousel owl-theme">
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client1.webp" type="image/webp">
+              <img src="img/client1.png" alt="client 1" class="carousel__img">
+            </picture>
+          </li>
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client2.webp" type="image/webp">
+              <img src="img/client2.png" alt="client 2" class="carousel__img">
+            </picture>
+          </li>
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client3.webp" type="image/webp">
+              <img src="img/client3.png" alt="client 3" class="carousel__img">
+            </picture>
+          </li>
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client4.webp" type="image/webp">
+              <img src="img/client4.png" alt="client 4" class="carousel__img">
+            </picture>
+          </li>
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client5.webp" type="image/webp">
+              <img src="img/client5.png" alt="client 5" class="carousel__img">
+            </picture>
+          </li>
+          <li class="carousel__item">
+            <picture>
+              <source srcset="img/client1.webp" type="image/webp">
+              <img src="img/client1.png" alt="client 1" class="carousel__img">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- /.clients -->
+
+    <section id="contacts" class="contacts">
+      <div class="wrap contacts__wrap">
+        <h2 class="contacts__title">contacts</h2>
+        <div class="contacts__block">
+          <form class="contacts__form form" method="GET" action="">
+            <div class="form__group">
+              <label class="form__label" for="formName">Name</label>
+              <input class="form__control" type="text" id="formName" name="name" placeholder="Name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formPhone">Phone</label>
+              <input class="form__control" type="text" id="formPhone" name="phone" placeholder="Phone">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formMessage">Message</label>
+              <textarea class="form__control form__control--textarea" name="message" id="formMessage"  placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="form__btn">Send</button>
+          </form>
+          <div class="contacts__map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af91a7b27f4522827583579753b11dbb7ebaffa9a6a336934c88857f046d49349&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.contacts -->
+
+    <footer class="footer">
+      <div class="wrap footer__wrap">
+        <nav class="menu footer__menu">
+          <ul class="menu__list menu__list--sm-column">
+            <li class="menu__item"><a href="#home" class="menu__link menu__link--without-line">home</a></li>
+            <li class="menu__item"><a href="#advantages" class="menu__link menu__link--without-line">advantages</a></li>
+            <li class="menu__item"><a href="#works" class="menu__link menu__link--without-line">works</a></li>
+            <li class="menu__item"><a href="#skills" class="menu__link menu__link--without-line">skills</a></li>
+            <li class="menu__item"><a href="#blog" class="menu__link menu__link--without-line">blog</a></li>
+            <li class="menu__item"><a href="#clients" class="menu__link menu__link--without-line">clients</a></li>
+            <li class="menu__item"><a href="#contacts" class="menu__link menu__link--without-line">contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <!-- /.footer -->
+
   </div>
 <script src="js/jquery.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/all.min.js"></script>
 </body>
 </html>

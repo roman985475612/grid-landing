@@ -1,5 +1,4 @@
 .blog {
-    background-color: $bg-dark;
 
     &__title-hide {
         @include visually-hidden();
@@ -35,6 +34,7 @@
     }
 
     &__list {
+        margin: 0;
         padding-top: 80px;
         padding-bottom: 160px;
         padding-left: 0;

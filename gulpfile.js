@@ -20,9 +20,14 @@ const imagemin     = require('gulp-imagemin')
 const env          = process.env.NODE_ENV
 const fs           = require('fs')
     
-const styles = []
+const styles = [
+    './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
+    './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
+]
+
 const scripts = [
-    './node_modules/jquery/dist/jquery.min.js'
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/owl.carousel/dist/owl.carousel.min.js'
 ]
 
 task('create:dirs', () => {
@@ -186,6 +191,7 @@ task('default',
         parallel(
             'copy:html', 
             'copy:js', 
+            'copy:css', 
             'scss', 
             'js', 
         ), 
@@ -198,8 +204,9 @@ task('build',
         'clean:all', 
         parallel(
             'copy:html', 
-            'scss', 
             'copy:js',
+            'copy:css', 
+            'scss', 
             'js', 
             'img:min', 
             'img:webp', 
